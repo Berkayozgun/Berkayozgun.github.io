@@ -1,29 +1,31 @@
 /* Accordion.css */
 .accordion {
-  color: #227093;
-  border: 2px solid;
   border-radius: 0.5rem;
   overflow: hidden;
+  transition: all 1s;
 }
 
 .tab {
   position: relative;
+  transition: all 1s;
 }
 
 .tab input {
   position: absolute;
   opacity: 0;
   z-index: -1;
+  transition: all 1s;
 }
 
 .tab__content {
   max-height: min-content;
   overflow: hidden;
-  transition: all 0.35s;
+  transition: all 1s;
 }
 
 .tab input:checked ~ .tab__content {
   max-height: 10rem;
+  transition: all 0.35s;
 }
 
 .tab__label,
@@ -32,11 +34,13 @@
   color: black;
   background: #227093;
   cursor: pointer;
+  transition: all 0.35s;
 }
 
 .tab__label {
   justify-content: space-between;
   padding: 1rem;
+  transition: all 0.35s;
 }
 
 .tab__label::after {
@@ -55,17 +59,20 @@
 .tab__content p {
   margin: 0;
   padding: 1rem;
+  transition: all 0.35s;
 }
 
 .tab__close {
   justify-content: flex-end;
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
+  transition: all 0.35s;
 }
 
 /* Arrow animation */
 .tab input:not(:checked) + .tab__label:hover::after {
   animation: bounce 0.5s infinite;
+  transition: all 0.35s;
 }
 
 @keyframes bounce {

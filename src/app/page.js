@@ -1,92 +1,116 @@
-import React from "react";
+"use client";
+import * as React from "react";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import Accordion from "./components/Accordion";
 import { data } from "./data/data";
 
-const renderListItems = (items, hasSubtitle = false, subtitleKey) =>
-  items.map((item, index) => (
-    <li key={index}>
-      <h3 className="text-lg font-semibold">{item.title}</h3>
-      {hasSubtitle && <p>{item[subtitleKey]}</p>}
-    </li>
-  ));
-
-const renderCategory = (category) => {
-  return (
-    <ul>
-      {category.items.map((item, index) => (
-        <li key={index}>
-          {category.title === "Projects" && (
-            <p>
-              {item.title} - {item.description}
-            </p>
-          )}
-          {category.title === "Experience" && (
-            <p>
-              {item.duration} - {item.company}
-            </p>
-          )}
-          {category.title === "Education" && (
-            <p>
-              {item.institution} - {item.degree} - {item.duration} - {item.gpa}
-            </p>
-          )}
-          {category.title === "Skills" && <p>{item}</p>}
-          {category.title === "Personal Details" && (
-            <p>
-              {item.link ? <a href={item.link}>{item.value}</a> : item.value}
-            </p>
-          )}
-          {category.title === "Hobbies/Interests" && <p>{item}</p>}
-          {category.title === "Activities" && <p>{item}</p>}
-          {category.title === "Certifications" && (
-            <p>
-              {item.title} - {item.provider}
-            </p>
-          )}
-          {category.title === "References" && (
-            <p>
-              {item.name} - {item.position} - {item.company} -{" "}
-              <a href="mailto:{item.email}">{item.email}</a>
-            </p>
-          )}
-        </li>
-      ))}
-    </ul>
-  );
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };
 
-const renderAccordionSection = (category) => (
-  <section key={category.title} className="my-8">
-    <Accordion title={category.title}>
-      {category.subtitle && (
-        <h2 className="text-2xl font-bold mb-4">{category.subtitle}</h2>
-      )}
-      {category.items && renderCategory(category)}
-    </Accordion>
-  </section>
-);
+const transition = {
+  delay: 0.5,
+  ease: "easeOut",
+  duration: 0.5,
+};
 
 export default function Home() {
   return (
-    <div className="w-full items-center justify-center mt-4">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+      transition={transition}
+      className="flex flex-col w-full items-center justify-center mt-4"
+    >
       <Head>
-        <title className="mt-4 border">{data.title}x</title>
+        <title className="mt-4">{data.title}x</title>
         <meta name="description" content={data.description} />
       </Head>
-
-      <header className="text-center">
+      <motion.header
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        transition={transition}
+        className="text-center"
+      >
         <h1 className="text-4xl font-bold">{data.name}</h1>
         <p className="text-lg">{data.role}</p>
-      </header>
-
-      {data.categories.map(renderAccordionSection)}
-      <footer className="text-center py-4 bg-gray-800 text-white">
+      </motion.header>
+      <div className="flex flex-col justify-center items-center mt-4  w-full">
+        <div className="flex flex-col justify-center items-center w-4/6">
+          {data.categories.map((category, index) => (
+            <Accordion key={index} title={category.title}>
+              {category.items.map((item, index) =>
+                category.title === "Projects" ? (
+                  <div key={index} className="flex flex-col">
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                ) : category.title === "Experience" ? (
+                  <div key={index} className="flex flex-col">
+                    <h3>{item.company}</h3>
+                    <p>{item.position}</p>
+                    <p>{item.duration}</p>
+                  </div>
+                ) : category.title === "Education" ? (
+                  <div key={index} className="flex flex-col">
+                    <h3>{item.institution}</h3>
+                    <p>{item.degree}</p>
+                    <p>{item.duration}</p>
+                    {item.gpa ? <p>{item.gpa}</p> : ""}
+                  </div>
+                ) : category.title === "Skills" ? (
+                  <div key={index} className="flex flex-col">
+                    <h3>{item}</h3>
+                  </div>
+                ) : category.title === "Personal Details" ? (
+                  <div key={index} className="flex flex-col">
+                    <h3>
+                      {item.label} : {item.value}{" "}
+                      <a href={item.link}>{item.link}</a>
+                    </h3>
+                  </div>
+                ) : category.title === "Hobbies/Interests" ? (
+                  <div key={index} className="flex flex-col">
+                    <h3>{item}</h3>
+                  </div>
+                ) : category.title === "Activities" ? (
+                  <div key={index} className="flex flex-col">
+                    <h3>{item}</h3>
+                  </div>
+                ) : category.title === "Certifications" ? (
+                  <div key={index} className="flex flex-col">
+                    <h3>{item.title}</h3>
+                    <p>{item.provider}</p>
+                  </div>
+                ) : category.title === "References" ? (
+                  <div key={index} className="flex flex-col">
+                    <h3>{item.name}</h3>
+                    <p>{item.position}</p>
+                    <p>{item.company}</p>
+                    <p>{item.email}</p>
+                    <p>{item.link}</p>
+                  </div>
+                ) : (
+                  <div key={index} className="flex flex-col">
+                    <h3>{item}</h3>
+                  </div>
+                )
+              )}
+            </Accordion>
+          ))}
+        </div>
+      </div>
+      <footer className="text-center w-full py-4 bg-gray-800 text-white">
         <p>
-          İletişim: berkayozgun001@gmail.com | LinkedIn:
-          linkedin.com/in/berkayozgun
+          İletişim: <a href="mailto:berkayozgun001@gmail.com">mail</a> |
+          LinkedIn:{" "}
+          <a href="https://www.linkedin.com/in/berkayozgun">linkedin</a>
         </p>
       </footer>
-    </div>
+    </motion.div>
   );
 }

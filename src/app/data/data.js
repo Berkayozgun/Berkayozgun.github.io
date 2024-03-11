@@ -112,29 +112,6 @@ export const data = {
       ],
     },
     {
-      title: "Personal Details",
-      items: [
-        { label: "Date of Birth", value: "26/03/1998" },
-        { label: "Address", value: "Edirne, Turkey" },
-        { label: "Email", value: "berkayozgun001@gmail.com" },
-        {
-          label: "Phone",
-          value: "+905422666081",
-          link: "tel:+905422666081",
-        },
-        {
-          label: "Github",
-          value: "github.com/Berkayozgun001",
-          link: "https://github.com/Berkayozgun001",
-        },
-        {
-          label: "LinkedIn",
-          value: "linkedin.com/in/berkayozgun",
-          link: "https://linkedin.com/in/berkayozgun",
-        },
-      ],
-    },
-    {
       title: "Hobbies/Interests",
       items: [
         "Table-tennis",
@@ -184,6 +161,29 @@ export const data = {
           company: "Trakya University",
           email: "ozlema@trakya.edu.tr",
           link: "mailto:ozlema@trakya.edu.tr",
+        },
+      ],
+    },
+    {
+      title: "Personal Details",
+      items: [
+        { label: "Date of Birth", value: "26/03/1998" },
+        { label: "Address", value: "Edirne, Turkey" },
+        { label: "Email", value: "berkayozgun001@gmail.com" },
+        {
+          label: "Phone",
+          value: "+905422666081",
+          link: "tel:+905422666081",
+        },
+        {
+          label: "Github",
+          value: "github.com/Berkayozgun001",
+          link: "https://github.com/Berkayozgun001",
+        },
+        {
+          label: "LinkedIn",
+          value: "linkedin.com/in/berkayozgun",
+          link: "https://linkedin.com/in/berkayozgun",
         },
       ],
     },
