@@ -20,7 +20,7 @@ const Accordion = ({ title, children }) => {
     <motion.div
       animate="visible"
       transition={{ duration: 1 }}
-      className={`mb-4 w-3/6 items-center justify-center shadow-lg	${styles.accordion}`}
+      className={`mb-4 w-3/6 items-center justify-center shadow-md hover:shadow-xl ${styles.accordion}`}
     >
       {" "}
       {/* Use the accordion style */}
