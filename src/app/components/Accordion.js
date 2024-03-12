@@ -31,8 +31,12 @@ const Accordion = ({ title, children }) => {
         className={`bg-gray-200 p-4 cursor-pointer flex justify-between items-center `}
         onClick={toggleAccordion}
       >
-        <h2>{title}</h2>
-        <span className={`w-4 h-4 transform ${isOpen ? "rotate-180" : ""}`}>
+        <h2 className={isOpen ? "text-red-500 duration-500" : ""}>{title}</h2>
+        <span
+          className={`w-4 h-4 transform ${
+            isOpen ? "rotate-180 duration-1000" : ""
+          }`}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='20px'
