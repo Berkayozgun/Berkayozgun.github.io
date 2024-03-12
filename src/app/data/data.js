@@ -111,16 +111,7 @@ export const data = {
         "Vue.js",
       ],
     },
-    {
-      title: "Hobbies/Interests",
-      items: [
-        "Table-tennis",
-        "Basketball",
-        "Writing",
-        "Photography",
-        "Reading",
-      ],
-    },
+
     {
       title: "Activities",
       items: [
@@ -165,26 +156,13 @@ export const data = {
       ],
     },
     {
-      title: "Personal Details",
+      title: "Hobbies/Interests",
       items: [
-        { label: "Date of Birth", value: "26/03/1998" },
-        { label: "Address", value: "Edirne, Turkey" },
-        { label: "Email", value: "berkayozgun001@gmail.com" },
-        {
-          label: "Phone",
-          value: "+905422666081",
-          link: "tel:+905422666081",
-        },
-        {
-          label: "Github",
-          value: "github.com/Berkayozgun001",
-          link: "https://github.com/Berkayozgun001",
-        },
-        {
-          label: "LinkedIn",
-          value: "linkedin.com/in/berkayozgun",
-          link: "https://linkedin.com/in/berkayozgun",
-        },
+        "Table-tennis",
+        "Basketball",
+        "Writing",
+        "Photography",
+        "Reading",
       ],
     },
   ],
