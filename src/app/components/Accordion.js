@@ -23,9 +23,9 @@ const AccordionItem = ({ item, category }) => {
     case "Experience":
       return (
         <div className='flex flex-col flex-wrap p-4 text-black'>
-          <ol class='relative border-s-2 border-gray-200 dark:border-gray-400'>
-            <li class='mb-10 ms-6'>
-              <span class='absolute flex items-center justify-center h-6 w-6 shadow-2xl rounded-full -start-3 ring-8 ring-white dark:ring-white '>
+          <ol className='relative border-s-2 border-gray-200 dark:border-gray-400'>
+            <li className='mb-10 ms-6'>
+              <span className='absolute flex items-center justify-center h-6 w-6 shadow-2xl rounded-full -start-3 ring-8 ring-white dark:ring-white '>
                 <Image
                   src={item.companyLogoUrl}
                   alt='company logo'
@@ -34,16 +34,16 @@ const AccordionItem = ({ item, category }) => {
                   className='rounded-full shadow-xl'
                 />
               </span>
-              <h3 class='flex items-center mb-1 text-lg font-semibold text-gray-900 text-black'>
+              <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 text-black'>
                 <h3>{item.company}</h3>
               </h3>
-              <time class='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+              <time className='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
                 {item.position}
               </time>
-              <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+              <p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
                 <p>{item.duration}</p>
               </p>
-              <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+              <p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
                 <p>{item.description}</p>
               </p>
             </li>
@@ -53,9 +53,9 @@ const AccordionItem = ({ item, category }) => {
     case "Education":
       return (
         <div className='flex flex-col w-full p-4 text-black'>
-          <ol class='relative border-s-2 border-gray-200 dark:border-gray-400'>
-            <li class='mb-10 ms-6'>
-              <span class='absolute flex items-center justify-center h-6 w-6 shadow-2xl rounded-full -start-3 ring-8 ring-white dark:ring-white '>
+          <ol className='relative border-s-2 border-gray-200 dark:border-gray-400'>
+            <li className='mb-10 ms-6'>
+              <span className='absolute flex items-center justify-center h-6 w-6 shadow-2xl rounded-full -start-3 ring-8 ring-white dark:ring-white '>
                 <Image
                   src={item.logoUrl}
                   alt='company logo'
@@ -64,16 +64,16 @@ const AccordionItem = ({ item, category }) => {
                   className='rounded-full shadow-xl'
                 />
               </span>
-              <h3 class='flex items-center mb-1 text-lg font-semibold text-gray-900 text-black'>
+              <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 text-black'>
                 <h3>{item.institution}</h3>
               </h3>
-              <time class='flex w-full mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+              <time className='flex w-full mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
                 {item.degree}
               </time>
-              <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+              <p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
                 <p>{item.duration}</p>
               </p>
-              <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+              <p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
                 <p>{item.gpa ? <p>{item.gpa}</p> : ""}</p>
               </p>
             </li>
@@ -81,13 +81,47 @@ const AccordionItem = ({ item, category }) => {
         </div>
       );
     case "Skills":
-    case "Hobbies/Interests":
-    case "Activities":
       return (
-        <div className='flex flex-col'>
-          <h3>{item}</h3>
+        <div className='flex flex-row justify-around'>
+          <span className='flex bg-blue-100 text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-500 dark:text-blue-50'>
+            {item}
+          </span>
         </div>
       );
+    case "Activities":
+      return (
+        <div className='flex flex-col text-black shadow-xl rounded-xl p-2 w-full'>
+          <ul
+            role='list'
+            className='flex w-full divide-y divide-gray-200 dark:divide-gray-700'
+          >
+            <li className='flex py-4 w-full'>
+              <div className='flex items-center w-full gap-4'>
+                <div className='flex-shrink-0'>
+                  <img
+                    className='w-8 h-8 rounded-full'
+                    src={item.communityLogo}
+                    alt='Neil image'
+                  />
+                </div>
+                <div className='flex-1 min-w-0'>
+                  <p className='text-sm font-semibold text-gray-900 truncate dark:text-black'>
+                    {item.communityName}
+                  </p>
+                  <p className='text-sm text-gray-500 truncate dark:text-gray-400'>
+                    {item.duration}
+                  </p>
+                </div>
+                <span className='inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300'>
+                  <span className='w-2 h-2 me-1 bg-green-500 rounded-full'></span>
+                  {item.role}
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      );
+
     case "Personal Details":
       return (
         <div className='flex flex-col'>

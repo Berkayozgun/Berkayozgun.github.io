@@ -147,8 +147,19 @@ export const data = {
     {
       title: "Activities",
       items: [
-        "IEEE Trakya University Student Branch Member",
-        "Google Developer Student Club Member",
+        {
+          communityName: "IEEE Trakya University Student Branch",
+          role: "Member",
+          communityLogo: "https://cdn.worldvectorlogo.com/logos/ieee.svg",
+          duration: "2019 - Present",
+        },
+        {
+          communityName: "Google Developer Student Club",
+          role: "Member",
+          communityLogo:
+            "data:image/png;base64,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",
+          duration: "2019 - Present",
+        },
       ],
     },
     {
