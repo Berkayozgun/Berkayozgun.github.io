@@ -13,7 +13,7 @@ const AccordionItem = ({ item, category }) => {
   switch (category) {
     case "Projects":
       return (
-        <div className='flex flex-col w-5/12 flex-wrap border border-gray-200 rounded-lg p-4 shadow-xl justify-evenly'>
+        <div className='flex flex-col w-5/12 flex-wrap border border-gray-200 rounded-lg p-4 shadow-xl justify-evenly hover:shadow-2xl transition-all duration-500 ease-in-out'>
           <h3 className='flex text-md font-semibold'>{item.title}</h3>
           <p className='flex text-sm italic text-gray-600 mt-6'>
             {item.description}
@@ -22,10 +22,32 @@ const AccordionItem = ({ item, category }) => {
       );
     case "Experience":
       return (
-        <div className='flex flex-col'>
-          <h3>{item.company}</h3>
-          <p>{item.position}</p>
-          <p>{item.duration}</p>
+        <div className='flex flex-col flex-wrap p-4 text-black'>
+          <ol class='relative border-s-2 border-gray-200 dark:border-gray-400'>
+            <li class='mb-10 ms-6'>
+              <span class='absolute flex items-center justify-center h-6 w-6 shadow-2xl rounded-full -start-3 ring-8 ring-white dark:ring-white '>
+                <Image
+                  src={item.companyLogoUrl}
+                  alt='company logo'
+                  width={50}
+                  height={50}
+                  className='rounded-full shadow-xl'
+                />
+              </span>
+              <h3 class='flex items-center mb-1 text-lg font-semibold text-gray-900 text-black'>
+                <h3>{item.company}</h3>
+              </h3>
+              <time class='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+                {item.position}
+              </time>
+              <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+                <p>{item.duration}</p>
+              </p>
+              <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+                <p>{item.description}</p>
+              </p>
+            </li>
+          </ol>
         </div>
       );
     case "Education":

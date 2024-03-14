@@ -5,6 +5,11 @@ import Head from "next/head";
 import Accordion from "./components/Accordion"; // Accordion bileşenini içeri aktarın
 import { data } from "./data/data";
 import Footer from "./components/Footer";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 const fadeIn = {
   hidden: { opacity: 0 },
