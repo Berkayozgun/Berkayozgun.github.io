@@ -1,14 +1,82 @@
-// components/Accordion.js
 "use client";
+import React from "react";
 import { useState } from "react";
-import { motion } from "framer-motion"; // Stil dosyasını içeri aktarın
+import { motion } from "framer-motion";
 
 const fadeIn = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
 
-const Accordion = ({ title, children }) => {
+const AccordionItem = ({ item, category }) => {
+  switch (category) {
+    case "Projects":
+      return (
+        <div className='flex flex-col'>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </div>
+      );
+    case "Experience":
+      return (
+        <div className='flex flex-col'>
+          <h3>{item.company}</h3>
+          <p>{item.position}</p>
+          <p>{item.duration}</p>
+        </div>
+      );
+    case "Education":
+      return (
+        <div className='flex flex-col'>
+          <h3>{item.institution}</h3>
+          <p>{item.degree}</p>
+          <p>{item.duration}</p>
+          {item.gpa ? <p>{item.gpa}</p> : ""}
+        </div>
+      );
+    case "Skills":
+    case "Hobbies/Interests":
+    case "Activities":
+      return (
+        <div className='flex flex-col'>
+          <h3>{item}</h3>
+        </div>
+      );
+    case "Personal Details":
+      return (
+        <div className='flex flex-col'>
+          <h3>
+            {item.label} : {item.value} <a href={item.link}>{item.link}</a>
+          </h3>
+        </div>
+      );
+    case "Certifications":
+      return (
+        <div className='flex flex-col'>
+          <h3>{item.title}</h3>
+          <p>{item.provider}</p>
+        </div>
+      );
+    case "References":
+      return (
+        <div className='flex flex-col'>
+          <h3>{item.name}</h3>
+          <p>{item.position}</p>
+          <p>{item.company}</p>
+          <p>{item.email}</p>
+          <p>{item.link}</p>
+        </div>
+      );
+    default:
+      return (
+        <div className='flex flex-col'>
+          <h3>{item}</h3>
+        </div>
+      );
+  }
+};
+
+const Accordion = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
@@ -59,7 +127,9 @@ const Accordion = ({ title, children }) => {
           className={`p-4 
            max-h-min-content overflow-hidden transition-all duration-1000`}
         >
-          {children}
+          {items.map((item, index) => (
+            <AccordionItem key={index} item={item} category={title} />
+          ))}
         </motion.div>
       )}
     </motion.div>

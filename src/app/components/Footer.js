@@ -1,7 +1,7 @@
 import React from "react";
 import MailSVG from "../images/MailSVG";
-import LinkedinLogo from "../images/LinkedinLogo";
-import GithubLogo from "../images/GithubLogo";
+import LinkedinSVG from "../images/LinkedinSVG";
+import GithubSVG from "../images/GithubSVG";
 
 function Footer() {
   return (
@@ -15,12 +15,12 @@ function Footer() {
       </div>
       <div>
         <a href='https://www.linkedin.com/in/berkayozgun'>
-          <LinkedinLogo />
+          <LinkedinSVG />
         </a>
       </div>
       <div className='flex flex-row items-center justify-center text-center gap-4'>
         <a href='https://www.github.com/Berkayozgun/'>
-          <GithubLogo />
+          <GithubSVG />
         </a>
       </div>
     </footer>

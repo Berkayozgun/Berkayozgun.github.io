@@ -1,8 +1,8 @@
 "use client";
-import * as React from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Head from "next/head";
-import Accordion from "./components/Accordion";
+import Accordion from "./components/Accordion"; // Accordion bileşenini içeri aktarın
 import { data } from "./data/data";
 import Footer from "./components/Footer";
 
@@ -44,65 +44,11 @@ export default function Home() {
         <div className='flex flex-col justify-center items-center mt-4  w-full'>
           <div className='flex flex-col justify-center items-center w-4/6'>
             {data.categories.map((category, index) => (
-              <Accordion key={index} title={category.title}>
-                {category.items.map((item, index) =>
-                  category.title === "Projects" ? (
-                    <div key={index} className='flex flex-col'>
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                    </div>
-                  ) : category.title === "Experience" ? (
-                    <div key={index} className='flex flex-col'>
-                      <h3>{item.company}</h3>
-                      <p>{item.position}</p>
-                      <p>{item.duration}</p>
-                    </div>
-                  ) : category.title === "Education" ? (
-                    <div key={index} className='flex flex-col'>
-                      <h3>{item.institution}</h3>
-                      <p>{item.degree}</p>
-                      <p>{item.duration}</p>
-                      {item.gpa ? <p>{item.gpa}</p> : ""}
-                    </div>
-                  ) : category.title === "Skills" ? (
-                    <div key={index} className='flex flex-col'>
-                      <h3>{item}</h3>
-                    </div>
-                  ) : category.title === "Personal Details" ? (
-                    <div key={index} className='flex flex-col'>
-                      <h3>
-                        {item.label} : {item.value}{" "}
-                        <a href={item.link}>{item.link}</a>
-                      </h3>
-                    </div>
-                  ) : category.title === "Hobbies/Interests" ? (
-                    <div key={index} className='flex flex-col'>
-                      <h3>{item}</h3>
-                    </div>
-                  ) : category.title === "Activities" ? (
-                    <div key={index} className='flex flex-col'>
-                      <h3>{item}</h3>
-                    </div>
-                  ) : category.title === "Certifications" ? (
-                    <div key={index} className='flex flex-col'>
-                      <h3>{item.title}</h3>
-                      <p>{item.provider}</p>
-                    </div>
-                  ) : category.title === "References" ? (
-                    <div key={index} className='flex flex-col'>
-                      <h3>{item.name}</h3>
-                      <p>{item.position}</p>
-                      <p>{item.company}</p>
-                      <p>{item.email}</p>
-                      <p>{item.link}</p>
-                    </div>
-                  ) : (
-                    <div key={index} className='flex flex-col'>
-                      <h3>{item}</h3>
-                    </div>
-                  )
-                )}
-              </Accordion>
+              <Accordion
+                key={index}
+                title={category.title}
+                items={category.items}
+              />
             ))}
           </div>
         </div>
