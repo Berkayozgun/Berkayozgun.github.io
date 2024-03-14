@@ -11,39 +11,51 @@ export const data = {
       items: [
         {
           title: "Notification Center Management Tool at JotForm",
-          description: "Jotform`da kullanılan bildirim merkezi yönetim aracı.",
+          description:
+            "JotForm'da bildirim merkezi yönetim aracı, React, Redux-toolkit kullanılarak geliştirildi.",
+          imageUrl: "https://picsum.photos/200/300",
         },
         {
           title: "Campfire Microblog-Fullstack on Sixfab",
-          description: "Kısa açıklama...",
-        },
-        {
-          title: "Flight Ticket App",
-          description: "Kısa açıklama...",
-        },
-        {
-          title: "Bus Ticket App",
-          description: "Kısa açıklama...",
+          description:
+            "Twitter benzeri mikroblog sitesi Vue.js, Flask, MongoDB kullanılarak geliştirildi.",
+          imageUrl: "https://picsum.photos/200/300",
         },
         {
           title: "Full-stack todo App web/mobile",
-          description: "Kısa açıklama...",
+          description:
+            "Full-stack todo App web/mobile, React, Redux, Node.js, Express, MongoDB kullanılarak geliştirildi.",
+          imageUrl: "https://picsum.photos/200/300",
         },
         {
           title: "Restaurant Menu App",
-          description: "Kısa açıklama...",
+          description:
+            "Restaurant Menu App, React, Redux, Node.js, Express, MongoDB kullanılarak geliştirildi.",
+          imageUrl: "https://picsum.photos/200/300",
         },
         {
           title: "Career Recommendation Project",
-          description: "Kısa açıklama...",
+          description:
+            "Kariyer öneri projesi, React, Redux, Node.js, Express, MongoDB kullanılarak geliştirildi.",
+          imageUrl: "https://picsum.photos/200/300",
         },
         {
           title: "Parentwiser Commercial Website Project",
-          description: "Kısa açıklama...",
+          description:
+            "Parentwiser Commercial Website Project, React, Redux, Node.js, Express, MongoDB kullanılarak geliştirildi.",
+          imageUrl: "https://picsum.photos/200/300",
         },
         {
           title: "Parentwiser Kidswiser Mobile App UI",
-          description: "Kısa açıklama...",
+          description:
+            "Parentwiser Kidswiser Mobile App UI, React, Redux, Node.js, Express, MongoDB kullanılarak geliştirildi.",
+          imageUrl: "https://picsum.photos/200/300",
+        },
+        {
+          title: "Personal Portfolio Web Application",
+          description:
+            "Kişisel portföy web uygulaması, React, Tailwind CSS kullanılarak geliştirildi.",
+          imageUrl: "https://picsum.photos/200/300",
         },
       ],
     },

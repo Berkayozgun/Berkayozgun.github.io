@@ -42,7 +42,7 @@ export default function Home() {
           <p className='text-lg'>{data.role}</p>
         </motion.header>
         <div className='flex flex-col justify-center items-center mt-4  w-full'>
-          <div className='flex flex-col justify-center items-center w-4/6'>
+          <div className='flex flex-col justify-center items-center w-10/12'>
             {data.categories.map((category, index) => (
               <Accordion
                 key={index}
@@ -52,6 +52,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+
         <Footer />
       </motion.div>
     </div>

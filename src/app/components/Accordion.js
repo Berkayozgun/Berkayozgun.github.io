@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -12,9 +13,11 @@ const AccordionItem = ({ item, category }) => {
   switch (category) {
     case "Projects":
       return (
-        <div className='flex flex-col'>
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
+        <div className='flex flex-col w-5/12 flex-wrap border border-gray-200 rounded-lg p-4 shadow-xl justify-evenly'>
+          <h3 className='flex text-md font-semibold'>{item.title}</h3>
+          <p className='flex text-sm italic text-gray-600 mt-6'>
+            {item.description}
+          </p>
         </div>
       );
     case "Experience":
@@ -101,8 +104,8 @@ const Accordion = ({ title, items }) => {
       >
         <h2 className={isOpen ? "text-red-500 duration-500" : ""}>{title}</h2>
         <span
-          className={`w-4 h-4 transform ${
-            isOpen ? "rotate-180 duration-1000" : ""
+          className={`w-4 h-4 transform rotate-180 ${
+            isOpen ? "rotate-90 duration-1000" : ""
           }`}
         >
           <svg
@@ -124,8 +127,8 @@ const Accordion = ({ title, items }) => {
           variants={fadeIn}
           initial='hidden'
           animate='visible'
-          className={`p-4 
-           max-h-min-content overflow-hidden transition-all duration-1000`}
+          className={`p-4 flex flex-wrap bg-gray-50 
+           overflow-hidden transition-all duration-100 gap-4 justify-around`}
         >
           {items.map((item, index) => (
             <AccordionItem key={index} item={item} category={title} />
