@@ -52,11 +52,32 @@ const AccordionItem = ({ item, category }) => {
       );
     case "Education":
       return (
-        <div className='flex flex-col'>
-          <h3>{item.institution}</h3>
-          <p>{item.degree}</p>
-          <p>{item.duration}</p>
-          {item.gpa ? <p>{item.gpa}</p> : ""}
+        <div className='flex flex-col w-full p-4 text-black'>
+          <ol class='relative border-s-2 border-gray-200 dark:border-gray-400'>
+            <li class='mb-10 ms-6'>
+              <span class='absolute flex items-center justify-center h-6 w-6 shadow-2xl rounded-full -start-3 ring-8 ring-white dark:ring-white '>
+                <Image
+                  src={item.logoUrl}
+                  alt='company logo'
+                  width={50}
+                  height={50}
+                  className='rounded-full shadow-xl'
+                />
+              </span>
+              <h3 class='flex items-center mb-1 text-lg font-semibold text-gray-900 text-black'>
+                <h3>{item.institution}</h3>
+              </h3>
+              <time class='flex w-full mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+                {item.degree}
+              </time>
+              <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+                <p>{item.duration}</p>
+              </p>
+              <p class='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
+                <p>{item.gpa ? <p>{item.gpa}</p> : ""}</p>
+              </p>
+            </li>
+          </ol>
         </div>
       );
     case "Skills":
