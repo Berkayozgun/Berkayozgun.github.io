@@ -168,14 +168,26 @@ export const data = {
         {
           title: "Responsive Web Design",
           provider: "freecodecamp.com",
+          source:
+            "https://freecodecamp.org/certification/ozgunberkay/responsive-web-design",
+          providerLogo:
+            "https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg",
         },
+
         {
           title: "Mobile Programming Training",
           provider: "Ecodation",
+          source: "",
+          providerLogo:
+            "data:image/jpeg;base64,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",
         },
         {
           title: "DEV236x : Introduction to Python: Absolute Beginner",
           provider: "edX.org - Microsoft",
+          source:
+            "https://courses.edx.org/certificates/f9979a697f2843249796e04e75673a50",
+          providerLogo:
+            "https://prod-discovery.edx-cdn.org/cdn-cgi/image/quality=60,format=webp,width=350/media/course/image/aef85d12-c40d-40ed-b302-49bbe5047b18-e611bc2eb670.png",
         },
       ],
     },

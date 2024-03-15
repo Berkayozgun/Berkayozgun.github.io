@@ -34,7 +34,7 @@ const AccordionItem = ({ item, category }) => {
                   className='rounded-full shadow-xl'
                 />
               </span>
-              <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 text-black'>
+              <h3 className='flex items-center mb-1 text-lg font-semibold text-black'>
                 <h3>{item.company}</h3>
               </h3>
               <time className='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
@@ -98,10 +98,12 @@ const AccordionItem = ({ item, category }) => {
             <li className='flex py-4 w-full'>
               <div className='flex items-center w-full gap-4'>
                 <div className='flex-shrink-0'>
-                  <img
+                  <Image
                     className='w-8 h-8 rounded-full'
                     src={item.communityLogo}
                     alt='Neil image'
+                    width={50}
+                    height={50}
                   />
                 </div>
                 <div className='flex-1 min-w-0'>
@@ -122,19 +124,47 @@ const AccordionItem = ({ item, category }) => {
         </div>
       );
 
-    case "Personal Details":
-      return (
-        <div className='flex flex-col'>
-          <h3>
-            {item.label} : {item.value} <a href={item.link}>{item.link}</a>
-          </h3>
-        </div>
-      );
     case "Certifications":
       return (
-        <div className='flex flex-col'>
-          <h3>{item.title}</h3>
-          <p>{item.provider}</p>
+        <div className='flex flex-col w-full p-2 m-2'>
+          <div className='w-full  p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-200 dark:border-gray-200'>
+            <div className='flow-root'>
+              <ul
+                role='list'
+                className='divide-y divide-gray-200 dark:divide-gray-700'
+              >
+                <li className='py-3 sm:py-4'>
+                  <div className='flex items-center '>
+                    <div className='flex-shrink-0 shadow-2xl'>
+                      <Image
+                        className='w-8 h-8 rounded-full shadow-2xl'
+                        src={item.providerLogo}
+                        alt='Neil image'
+                        width={50}
+                        height={50}
+                      />
+                    </div>
+                    <div className='flex-1 min-w-0 ms-4'>
+                      <p className='text-sm font-medium text-gray-900 truncate dark:text-gray-900'>
+                        {item.title}
+                      </p>
+                      <p className='text-sm text-gray-600 truncate dark:text-gray-600 italic'>
+                        {item.provider}
+                      </p>
+                    </div>
+                    <a
+                      href={item.source}
+                      classname='inline-flex items-center text-base font-semibold text-white dark:text-white'
+                    >
+                      <span className='bg-blue-500 p-2 rounded-lg dark:bg-blue-500 text-gray-50'>
+                        View
+                      </span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       );
     case "References":
