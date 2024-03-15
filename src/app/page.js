@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Head from "next/head";
-import Accordion from "./components/Accordion"; // Accordion bileşenini içeri aktarın
+import Accordion from "./components/Accordion";
 import { data } from "./data/data";
 import Footer from "./components/Footer";
 import {

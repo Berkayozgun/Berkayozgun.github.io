@@ -219,9 +219,9 @@ const AccordionItem = ({ item, category }) => {
                 {item.company}
               </span>
               <div class='flex mt-4 md:mt-6'>
-                <span class='flex bg-gray-100 text-gray-500 text-xs justify-center items-center font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300'>
+                <a href={item.link} class='flex bg-gray-100 text-gray-500 text-xs justify-center items-center font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300'>
                   {item.email}
-                </span>
+                </a>
               </div>
             </div>
           </div>

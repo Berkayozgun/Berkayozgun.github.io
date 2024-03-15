@@ -143,7 +143,6 @@ export const data = {
         "Vue.js",
       ],
     },
-
     {
       title: "Activities",
       items: [
@@ -198,7 +197,7 @@ export const data = {
         {
           name: "Ferhat Yaldıran",
           position: "Senior UI Developer / Team Lead",
-          company: "JotForm Inc.",
+          company: "Jotform Inc.",
           email: "fyaldiran@gmail.com",
           link: "mailto:fyaldiran@gmail.com",
         },
