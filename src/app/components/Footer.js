@@ -5,7 +5,7 @@ import GithubSVG from "../images/GithubSVG";
 
 function Footer() {
   return (
-    <footer className='flex flex-row items-center justify-center self-end text-center w-full py-4 bg-gray-800 mt-auto text-white gap-4'>
+    <footer className='flex flex-row items-center justify-center self-end text-center w-full py-4 bg-gray-800 text-white gap-4 fixed bottom-0 left-0 z-10'>
       <div className='flex flex-row items-center justify-center text-center gap-4'>
         © 2024 Berkay Özgün
         <span className='text-white'>|</span>

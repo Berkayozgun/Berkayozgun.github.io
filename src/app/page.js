@@ -24,13 +24,13 @@ const transition = {
 
 export default function Home() {
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col min-h-screen justify-center items-center'>
       <motion.div
         initial='hidden'
         animate='visible'
         variants={fadeIn}
         transition={transition}
-        className='flex flex-grow flex-col w-full h-full items-center justify-center mt-4 scroll-smooth'
+        className='flex flex-col w-full h-full items-center justify-center scroll-smooth'
       >
         <Head>
           <title className='mt-4'>{data.title}x</title>
