@@ -64,7 +64,7 @@ const AccordionItem = ({ item, category }) => {
                   className='rounded-full shadow-xl'
                 />
               </span>
-              <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 text-black'>
+              <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900'>
                 <h3>{item.institution}</h3>
               </h3>
               <time className='flex w-full mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
