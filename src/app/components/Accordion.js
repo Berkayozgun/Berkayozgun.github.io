@@ -170,56 +170,30 @@ const AccordionItem = ({ item, category }) => {
     case "References":
       return (
         <div className='flex flex-col w-full items-center justify-center p-4'>
-          <div class='w-full max-w-sm justify-center items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-500 dark:border-gray-200'>
-            <div class='flex justify-center items-center px-4 pt-4'>
-              <div
-                id='dropdown'
-                class='z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700'
-              >
-                <ul class='py-2' aria-labelledby='dropdownButton'>
-                  <li>
-                    <a
-                      href='#'
-                      class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
-                    >
-                      Edit
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href='#'
-                      class='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
-                    >
-                      Export Data
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href='#'
-                      class='block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white'
-                    >
-                      Delete
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class='flex flex-col items-center pb-10'>
-              <img
-                class='w-24 h-24 mb-3 rounded-full shadow-lg'
+          <div className='w-full max-w-sm justify-center items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-500 dark:border-gray-200'>
+            <div className='flex justify-center items-center px-4 pt-4'></div>
+            <div className='flex flex-col items-center pb-10'>
+              <Image
+                className='w-24 h-24 mb-3 rounded-full shadow-lg'
                 src='/docs/images/people/profile-picture-3.jpg'
+                width={24}
+                height={24}
+                alt=' '
               />
-              <h5 class='mb-1 text-xl font-medium text-gray-900 dark:text-white'>
+              <h5 className='mb-1 text-xl font-medium text-gray-900 dark:text-white'>
                 {item.name}
               </h5>
-              <span class='text-sm text-gray-500 dark:text-gray-400'>
+              <span className='text-sm text-gray-500 dark:text-gray-400'>
                 {item.position}
               </span>
-              <span class='text-sm text-gray-500 dark:text-gray-400'>
+              <span className='text-sm text-gray-500 dark:text-gray-400'>
                 {item.company}
               </span>
-              <div class='flex mt-4 md:mt-6'>
-                <a href={item.link} class='flex bg-gray-100 text-gray-500 text-xs justify-center items-center font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300'>
+              <div className='flex mt-4 md:mt-6'>
+                <a
+                  href={item.link}
+                  className='flex bg-gray-100 text-gray-500 text-xs justify-center items-center font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300'
+                >
                   {item.email}
                 </a>
               </div>
@@ -227,12 +201,16 @@ const AccordionItem = ({ item, category }) => {
           </div>
         </div>
       );
-    default:
+    case "Hobbies/Interests":
       return (
         <div className='flex flex-col'>
-          <h3>{item}</h3>
+          <span class='bg-primary/10 text-primary m-2 inline-block rounded-full border border-transparent px-2.5 py-1 text-xs font-medium'>
+            {item}
+          </span>
         </div>
       );
+    default:
+      return <div className='flex flex-col'></div>;
   }
 };
 
