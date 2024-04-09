@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ScreenshotSVG from "../images/ScreenshotSVG";
 import DemoSVG from "../images/DemoSVG";
+import Modal from "../components/Modal";
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -22,7 +23,7 @@ const AccordionItem = ({ item, category }) => {
             </h3>
             <div className='flex flex-row gap-4'>
               <ScreenshotSVG />
-
+              <Modal />
               <a href='#'>
                 <DemoSVG />
               </a>

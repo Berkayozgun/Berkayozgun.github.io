@@ -16,7 +16,7 @@ export const data = {
           imageUrl: "https://picsum.photos/200/300",
           demoUrl: "#",
           screenshotsUrl: [
-            "https://picsum.photos/200/300",
+            "https://drive.google.com/file/d/1Oo7TqASsdBgTKPpavSyFKPPCAH71Qx81/view?usp=sharing",
             "https://picsum.photos/200/300",
             "https://picsum.photos/200/300",
           ],
