@@ -14,48 +14,119 @@ export const data = {
           description:
             "Internal software tool for monitoring ,creating, specifying and pushing notifications to Jotform users.",
           imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
         },
         {
           title: "Campfire Microblog App  ",
           description:
             "Twitter-like social network web app. Developed with Vue.js, Flask and MongoDB.",
           imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
         },
         {
           title: "To-do App",
           description:
             "Full-stack to-do application. Developed with React-native for mobile and React for web",
           imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
         },
         {
           title: "Restaurant Menu App",
           description:
             "School project for web development class. Developed with React.js ",
           imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
         },
         {
           title: "Career Recommendation Project",
           description:
             "Final project for graduation. Uses machine learning to recommend jobs that are suitable for user.    Developed with Django, Javascript, Beautiful Soup, KNN and TF-IDF support",
           imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
         },
         {
           title: "Parentwiser Commercial Website Project",
           description:
             "Company's website redesigned and developed with React.js.",
           imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
         },
         {
           title: "Kidswiser Mobile App",
           description:
             "Mobile app for kids that company will launch in future. Developed with React-native.",
           imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
         },
         {
           title: "Personal Portfolio Web Application",
           description:
             "Personal portfolio website. Developed with Next.js, TailwindCSS.",
           imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
+        },
+        {
+          title: "E-commerce Website Admin Panel",
+          description:
+            "Admin panel for e-commerce website. Developed with Next.js, TailwindCSS.",
+          imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
+        },
+        {
+          title: "Spotify Clone Mobile App",
+          description: "Spotify clone mobile app. Developed with React-native.",
+          imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
         },
       ],
     },

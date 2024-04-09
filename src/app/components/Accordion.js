@@ -3,6 +3,8 @@ import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ScreenshotSVG from "../images/ScreenshotSVG";
+import DemoSVG from "../images/DemoSVG";
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -13,8 +15,19 @@ const AccordionItem = ({ item, category }) => {
   switch (category) {
     case "Projects":
       return (
-        <div className='flex flex-col w-5/12 flex-wrap border border-gray-200 rounded-lg p-4 shadow-xl justify-evenly hover:shadow-2xl transition-all duration-500 ease-in-out'>
-          <h3 className='flex text-md font-semibold'>{item.title}</h3>
+        <div className='flex flex-col w-6/12 flex-wrap border border-gray-200 rounded-lg p-4 shadow-xl justify-evenly hover:shadow-2xl transition-all duration-500 ease-in-out'>
+          <div className='flex flex-row justify-between w-full'>
+            <h3 className='flex text-md font-semibold text-left'>
+              {item.title}
+            </h3>
+            <div className='flex flex-row gap-4'>
+              <ScreenshotSVG />
+
+              <a href='#'>
+                <DemoSVG />
+              </a>
+            </div>
+          </div>
           <p className='flex text-sm italic text-gray-600 mt-6'>
             {item.description}
           </p>
