@@ -167,7 +167,7 @@ const AccordionItem = ({ item, category }) => {
                     </div>
                     <a
                       href={item.source}
-                      classname='inline-flex items-center text-base font-semibold text-white dark:text-white'
+                      className='inline-flex items-center text-base font-semibold text-white dark:text-white'
                     >
                       <span className='bg-blue-500 p-2 rounded-lg dark:bg-blue-500 text-gray-50'>
                         View
