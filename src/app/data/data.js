@@ -128,6 +128,30 @@ export const data = {
             "https://picsum.photos/200/300",
           ],
         },
+        {
+          title: "Bus/Plane Ticket Booking App",
+          description:
+            "This project developed for a technical interview. Developed with React.js, Node.js, Express.js, MongoDB.",
+          imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
+        },
+        {
+          title: "Weather Forecast App",
+          description:
+            "Weather app developed with React.js, OpenWeatherMap API.",
+          imageUrl: "https://picsum.photos/200/300",
+          demoUrl: "#",
+          screenshotsUrl: [
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+            "https://picsum.photos/200/300",
+          ],
+        },
       ],
     },
     {

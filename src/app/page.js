@@ -24,13 +24,13 @@ const transition = {
 
 export default function Home() {
   return (
-    <div className='flex flex-col min-h-screen justify-center items-center'>
+    <div className='flex h-full flex-col items-center mb-2'>
       <motion.div
         initial='hidden'
         animate='visible'
         variants={fadeIn}
         transition={transition}
-        className='flex flex-col w-full h-full items-center justify-center scroll-smooth'
+        className='flex flex-col w-full h-full items-center p-10 scroll-smooth'
       >
         <Head>
           <title className='mt-4'>{data.title}x</title>
@@ -47,7 +47,7 @@ export default function Home() {
           <p className='text-lg'>{data.role}</p>
         </motion.header>
         <div className='flex flex-col justify-center items-center mt-4  w-full'>
-          <div className='flex flex-col justify-center items-center w-10/12'>
+          <div className='flex flex-col justify-center items-center w-11/12'>
             {data.categories.map((category, index) => (
               <Accordion
                 key={index}

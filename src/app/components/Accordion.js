@@ -16,14 +16,13 @@ const AccordionItem = ({ item, category }) => {
   switch (category) {
     case "Projects":
       return (
-        <div className='flex flex-col w-6/12 flex-wrap border border-gray-200 rounded-lg p-4 shadow-xl justify-evenly hover:shadow-2xl transition-all duration-500 ease-in-out'>
+        <div className='flex flex-col w-72 flex-wrap border-medium border-gray-100 rounded-xl p-4 shadow-xl justify-evenly hover:shadow-2xl transition-all duration-500 ease-in-out'>
           <div className='flex flex-row justify-between w-full'>
             <h3 className='flex text-md font-semibold text-left'>
               {item.title}
             </h3>
             <div className='flex flex-row gap-4'>
               <ScreenshotSVG />
-              <Modal />
               <a href='#'>
                 <DemoSVG />
               </a>
@@ -37,7 +36,7 @@ const AccordionItem = ({ item, category }) => {
     case "Experience":
       return (
         <div className='flex flex-col flex-wrap p-4 text-black'>
-          <ol className='relative border-s-2 border-gray-200 dark:border-gray-400'>
+          <ol className='relative border-s-2 border-gray-300'>
             <li className='mb-10 ms-6'>
               <span className='absolute flex items-center justify-center h-6 w-6 shadow-2xl rounded-full -start-3 ring-8 ring-white dark:ring-white '>
                 <Image
@@ -185,15 +184,7 @@ const AccordionItem = ({ item, category }) => {
       return (
         <div className='flex flex-col w-full items-center justify-center p-4'>
           <div className='w-full max-w-sm justify-center items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-500 dark:border-gray-200'>
-            <div className='flex justify-center items-center px-4 pt-4'></div>
-            <div className='flex flex-col items-center pb-10'>
-              <Image
-                className='w-24 h-24 mb-3 rounded-full shadow-lg'
-                src='/docs/images/people/profile-picture-3.jpg'
-                width={24}
-                height={24}
-                alt=' '
-              />
+            <div className='flex flex-col items-center pt-10 pb-10'>
               <h5 className='mb-1 text-xl font-medium text-gray-900 dark:text-white'>
                 {item.name}
               </h5>
@@ -245,16 +236,16 @@ const Accordion = ({ title, items }) => {
       variants={accordionVariants}
       animate='visible'
       transition={{ duration: 1 }}
-      className={`mb-4 w-3/6 items-center justify-center shadow-md hover:shadow-xl transition-all duration-500 ease-in-out `}
+      className={`mb-4 w-3/6 items-center justify-center hover:drop-shadow-md transition-all duration-500 ease-in-out `}
     >
       <div
-        className={`bg-gray-200 p-4 cursor-pointer flex justify-between items-center `}
+        className={`bg-gray-200 p-4 cursor-pointer rounded-xl flex justify-between items-center `}
         onClick={toggleAccordion}
       >
         <h2 className={isOpen ? "text-red-500 duration-500" : ""}>{title}</h2>
         <span
           className={`w-4 h-4 transform rotate-180 ${
-            isOpen ? "rotate-90 duration-1000" : ""
+            isOpen ? "rotate-90 duration-1000 ease-in-out transition-all" : ""
           }`}
         >
           <svg
